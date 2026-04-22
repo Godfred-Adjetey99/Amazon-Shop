@@ -53,6 +53,10 @@ document.querySelector(".products-grid").innerHTML = productsHTML;
 
 document.querySelectorAll(".add-to-cart-button").forEach((button) => {
   button.addEventListener("click", () => {
-    console.log("done");
+    const productName = button.dataset.productName;
+    cart.push({
+      productName: productName,
+      quantity: 1,
+    });
   });
 });
